@@ -106,8 +106,10 @@
             // textBox_Load
             // 
             this.textBox_Load.Location = new System.Drawing.Point(12, 213);
+            this.textBox_Load.MaxLength = 9999999;
             this.textBox_Load.Multiline = true;
             this.textBox_Load.Name = "textBox_Load";
+            this.textBox_Load.ReadOnly = true;
             this.textBox_Load.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox_Load.Size = new System.Drawing.Size(479, 161);
             this.textBox_Load.TabIndex = 10;

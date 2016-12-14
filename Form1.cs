@@ -94,7 +94,9 @@ namespace ResourceDownloader
                                     Directory.CreateDirectory(diretorio[i]);
                             }
                             WebClient client = new WebClient();
-                            //Console.WriteLine(data[i]);
+                            textBox_Load.Text += Environment.NewLine + data[i];
+                            textBox_Load.SelectionStart = textBox_Load.Text.Length;
+                            textBox_Load.ScrollToCaret();
                             client.DownloadFile(data[i], baixar[i]);
                         }
                         catch (Exception ex)
@@ -109,7 +111,7 @@ namespace ResourceDownloader
 
         private void textBox_Load_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox_LinkResource_TextChanged(object sender, EventArgs e)
