@@ -44,6 +44,7 @@
             this.button_MapServerList = new System.Windows.Forms.Button();
             this.textBox_LinkResource = new System.Windows.Forms.TextBox();
             this.LinkResource = new System.Windows.Forms.Label();
+            this.button_stop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox_template
@@ -197,6 +198,16 @@
             this.LinkResource.TabIndex = 18;
             this.LinkResource.Text = "Link Resource";
             // 
+            // button_stop
+            // 
+            this.button_stop.Location = new System.Drawing.Point(497, 351);
+            this.button_stop.Name = "button_stop";
+            this.button_stop.Size = new System.Drawing.Size(75, 23);
+            this.button_stop.TabIndex = 19;
+            this.button_stop.Text = "Parar";
+            this.button_stop.UseVisualStyleBackColor = true;
+            this.button_stop.Click += new System.EventHandler(this.button_stop_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +215,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 415);
+            this.Controls.Add(this.button_stop);
             this.Controls.Add(this.LinkResource);
             this.Controls.Add(this.textBox_LinkResource);
             this.Controls.Add(this.button_MapServerList);
@@ -248,6 +260,7 @@
         private System.Windows.Forms.Button button_MapServerList;
         private System.Windows.Forms.TextBox textBox_LinkResource;
         private System.Windows.Forms.Label LinkResource;
+        private System.Windows.Forms.Button button_stop;
     }
 }
 
