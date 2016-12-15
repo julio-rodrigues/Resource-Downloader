@@ -101,7 +101,7 @@ namespace ResourceDownloader
                         }
                         catch (Exception ex)
                         {
-                            //Console.WriteLine(ex.Message);
+                            textBox_Load.Text += Environment.NewLine + "Erro: " + ex.Message;
                         }
                     }
                 }
