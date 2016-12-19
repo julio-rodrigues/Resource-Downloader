@@ -59,9 +59,6 @@ namespace ResourceDownloader
             //Salvar o link da resource
             string reslink = textBox_LinkResource.Text;
 
-            //FALTA IMPLEMENTAR O THREAD AQUI
-            //while (!_stoploop)
-            //{
             #region TemplateAllList
             string[] pasta = new string[5]
             {
@@ -131,7 +128,6 @@ namespace ResourceDownloader
                 }
             }
                 #endregion
-        //}
         }
         private void textBox_Load_TextChanged(object sender, EventArgs e)
         {

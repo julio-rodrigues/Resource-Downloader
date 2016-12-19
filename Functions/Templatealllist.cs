@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ResourceDownloader.functions.images
+namespace Functions
 {
-    public class BallList
+    public class Templatealllist
     {
     }
 }
