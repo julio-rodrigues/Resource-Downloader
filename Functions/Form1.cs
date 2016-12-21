@@ -1,9 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-using Functions;
 
-namespace ResourceDownloader
+namespace Functions
 {
     public partial class Principal : Form
     {
@@ -60,9 +59,8 @@ namespace ResourceDownloader
 
             templatealllist.ARM(loc_Template,reslink);
 
-
         }
-        private void textBox_Load_TextChanged(object sender, EventArgs e)
+        public void textBox_Load_TextChanged(object sender, EventArgs e)
         {
             
         }

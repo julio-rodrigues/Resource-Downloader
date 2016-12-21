@@ -1,4 +1,4 @@
-﻿namespace ResourceDownloader
+﻿namespace Functions
 {
     partial class Principal
     {
@@ -251,7 +251,7 @@
         private System.Windows.Forms.OpenFileDialog Open_Templatealllist;
         private System.Windows.Forms.Button btn_iniciar;
         private System.Windows.Forms.ProgressBar progressBar_load;
-        private System.Windows.Forms.TextBox textBox_Load;
+        public System.Windows.Forms.TextBox textBox_Load;
         private System.Windows.Forms.Label BallList;
         private System.Windows.Forms.TextBox textBox_BallList;
         private System.Windows.Forms.Button button_BallList;

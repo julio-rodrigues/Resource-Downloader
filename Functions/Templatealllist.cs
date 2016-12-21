@@ -2,15 +2,12 @@
 using System.Xml;
 using System.Net;
 using System.IO;
-using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace Functions
 {
-
     public class Templatealllist
     {
-
         public void ARM(string loc_Template, string reslink)
         {
             XmlDocument xmldocument = new XmlDocument();
@@ -62,8 +59,8 @@ namespace Functions
                             }
 
                             WebClient client = new WebClient();
-                            
-                            //.Text += Environment.NewLine + data[i];
+
+                            //textBox_Load.Text += Environment.NewLine + data[i];
                             //textBox_Load.SelectionStart = textBox_Load.Text.Length;
                             //textBox_Load.ScrollToCaret();
 
