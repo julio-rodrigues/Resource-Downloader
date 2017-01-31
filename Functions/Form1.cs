@@ -41,6 +41,16 @@ namespace Functions
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
+            if((textBox_MapServerList.Text == "" && textBox_LinkResource.Text == "") || (textBox_BallList.Text == "" && textBox_MapServerList.Text == ""))
+            {
+                MessageBox.Show("String Inválido",
+                "Erro",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                return;
+            }
+
             #region Desativa botoes
 
             btn_iniciar.Enabled = false;
