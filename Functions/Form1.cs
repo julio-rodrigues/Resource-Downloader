@@ -42,9 +42,9 @@ namespace Functions
         private void button1_Click_1(object sender, EventArgs e)
         {
             
-            if((textBox_MapServerList.Text == "" && textBox_LinkResource.Text == "") || (textBox_BallList.Text == "" && textBox_MapServerList.Text == ""))
+            if((textBox_MapServerList.Text == String.Empty && textBox_LinkResource.Text == String.Empty) || (textBox_BallList.Text == String.Empty && textBox_MapServerList.Text == String.Empty))
             {
-                MessageBox.Show("String Inválido",
+                MessageBox.Show("String Inválida",
                 "Erro",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
@@ -83,6 +83,20 @@ namespace Functions
         private void button_stop_Click(object sender, EventArgs e)
         {
             _stoploop = true;
+        }
+
+        private void button_BaixarXmls_Click(object sender, EventArgs e)
+        {
+            if(textBox_LinkReq.Text == String.Empty || textBox_LinkReq.Text == @"Exemplo : http://ddtank.com/request/")
+            {
+                MessageBox.Show("String Inválida",
+                "Erro",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+                return;
+            }
+
+        RequestDownloader.run(textBox_LinkReq.Text);
         }
     }
 }

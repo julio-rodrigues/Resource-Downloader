@@ -48,6 +48,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="RequestDownloader.cs" />
     <Compile Include="Templatealllist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

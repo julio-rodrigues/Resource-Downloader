@@ -45,6 +45,9 @@
             this.textBox_LinkResource = new System.Windows.Forms.TextBox();
             this.LinkResource = new System.Windows.Forms.Label();
             this.button_stop = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_LinkReq = new System.Windows.Forms.TextBox();
+            this.button_BaixarXmls = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox_template
@@ -89,7 +92,7 @@
             // 
             // btn_iniciar
             // 
-            this.btn_iniciar.Location = new System.Drawing.Point(497, 380);
+            this.btn_iniciar.Location = new System.Drawing.Point(497, 427);
             this.btn_iniciar.Name = "btn_iniciar";
             this.btn_iniciar.Size = new System.Drawing.Size(75, 23);
             this.btn_iniciar.TabIndex = 7;
@@ -99,14 +102,14 @@
             // 
             // progressBar_load
             // 
-            this.progressBar_load.Location = new System.Drawing.Point(12, 380);
+            this.progressBar_load.Location = new System.Drawing.Point(12, 427);
             this.progressBar_load.Name = "progressBar_load";
             this.progressBar_load.Size = new System.Drawing.Size(479, 23);
             this.progressBar_load.TabIndex = 9;
             // 
             // textBox_Load
             // 
-            this.textBox_Load.Location = new System.Drawing.Point(12, 213);
+            this.textBox_Load.Location = new System.Drawing.Point(12, 260);
             this.textBox_Load.MaxLength = 9999999;
             this.textBox_Load.Multiline = true;
             this.textBox_Load.Name = "textBox_Load";
@@ -179,7 +182,7 @@
             // textBox_LinkResource
             // 
             this.textBox_LinkResource.BackColor = System.Drawing.Color.White;
-            this.textBox_LinkResource.Location = new System.Drawing.Point(12, 181);
+            this.textBox_LinkResource.Location = new System.Drawing.Point(12, 234);
             this.textBox_LinkResource.Name = "textBox_LinkResource";
             this.textBox_LinkResource.Size = new System.Drawing.Size(286, 20);
             this.textBox_LinkResource.TabIndex = 17;
@@ -192,7 +195,7 @@
             this.LinkResource.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkResource.ForeColor = System.Drawing.Color.Black;
             this.LinkResource.ImageKey = "(none)";
-            this.LinkResource.Location = new System.Drawing.Point(12, 155);
+            this.LinkResource.Location = new System.Drawing.Point(12, 204);
             this.LinkResource.Name = "LinkResource";
             this.LinkResource.Size = new System.Drawing.Size(115, 23);
             this.LinkResource.TabIndex = 18;
@@ -200,7 +203,7 @@
             // 
             // button_stop
             // 
-            this.button_stop.Location = new System.Drawing.Point(497, 351);
+            this.button_stop.Location = new System.Drawing.Point(497, 398);
             this.button_stop.Name = "button_stop";
             this.button_stop.Size = new System.Drawing.Size(75, 23);
             this.button_stop.TabIndex = 19;
@@ -208,13 +211,48 @@
             this.button_stop.UseVisualStyleBackColor = true;
             this.button_stop.Click += new System.EventHandler(this.button_stop_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ImageKey = "(none)";
+            this.label2.Location = new System.Drawing.Point(12, 155);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 23);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Link Request";
+            // 
+            // textBox_LinkReq
+            // 
+            this.textBox_LinkReq.BackColor = System.Drawing.Color.White;
+            this.textBox_LinkReq.Location = new System.Drawing.Point(12, 181);
+            this.textBox_LinkReq.Name = "textBox_LinkReq";
+            this.textBox_LinkReq.Size = new System.Drawing.Size(286, 20);
+            this.textBox_LinkReq.TabIndex = 20;
+            this.textBox_LinkReq.Text = "Exemplo : http://ddtank.com/request/";
+            // 
+            // button_BaixarXmls
+            // 
+            this.button_BaixarXmls.Location = new System.Drawing.Point(304, 181);
+            this.button_BaixarXmls.Name = "button_BaixarXmls";
+            this.button_BaixarXmls.Size = new System.Drawing.Size(67, 20);
+            this.button_BaixarXmls.TabIndex = 22;
+            this.button_BaixarXmls.Text = "Baixar";
+            this.button_BaixarXmls.UseVisualStyleBackColor = true;
+            this.button_BaixarXmls.Click += new System.EventHandler(this.button_BaixarXmls_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(584, 415);
+            this.ClientSize = new System.Drawing.Size(584, 462);
+            this.Controls.Add(this.button_BaixarXmls);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox_LinkReq);
             this.Controls.Add(this.button_stop);
             this.Controls.Add(this.LinkResource);
             this.Controls.Add(this.textBox_LinkResource);
@@ -261,6 +299,9 @@
         private System.Windows.Forms.TextBox textBox_LinkResource;
         private System.Windows.Forms.Label LinkResource;
         private System.Windows.Forms.Button button_stop;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox_LinkReq;
+        private System.Windows.Forms.Button button_BaixarXmls;
     }
 }
 
