@@ -48,6 +48,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_LinkReq = new System.Windows.Forms.TextBox();
             this.button_BaixarXmls = new System.Windows.Forms.Button();
+            this.Open_BallList = new System.Windows.Forms.OpenFileDialog();
+            this.Open_MapServerList = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // textBox_template
@@ -245,6 +247,14 @@
             this.button_BaixarXmls.UseVisualStyleBackColor = true;
             this.button_BaixarXmls.Click += new System.EventHandler(this.button_BaixarXmls_Click);
             // 
+            // Open_BallList
+            // 
+            this.Open_BallList.FileName = "Open_BallList";
+            // 
+            // Open_MapServerList
+            // 
+            this.Open_MapServerList.FileName = "Open_MapServerList";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,6 +314,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_LinkReq;
         private System.Windows.Forms.Button button_BaixarXmls;
+        private System.Windows.Forms.OpenFileDialog Open_BallList;
+        private System.Windows.Forms.OpenFileDialog Open_MapServerList;
     }
 }
 

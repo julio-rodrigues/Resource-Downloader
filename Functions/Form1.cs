@@ -101,18 +101,18 @@ namespace Functions
 
         private void button_MapServerList_Click(object sender, EventArgs e)
         {
-            OpenFileDialog Open_Templatealllist = new OpenFileDialog();
-            Open_Templatealllist.Filter = "MapServerList (*.xml)|*.xml";
-            Open_Templatealllist.ShowDialog();
-            textBox_MapServerList.Text = (Open_Templatealllist.FileName).Replace(@"\", @"\\");
+            OpenFileDialog Open_MapServerList = new OpenFileDialog();
+            Open_MapServerList.Filter = "MapServerList (*.xml)|*.xml";
+            Open_MapServerList.ShowDialog();
+            textBox_MapServerList.Text = (Open_MapServerList.FileName).Replace(@"\", @"\\");
         }
 
         private void button_BallList_Click(object sender, EventArgs e)
         {
-            OpenFileDialog Open_Templatealllist = new OpenFileDialog();
-            Open_Templatealllist.Filter = "BallList (*.xml)|*.xml";
-            Open_Templatealllist.ShowDialog();
-            textBox_BallList.Text = (Open_Templatealllist.FileName).Replace(@"\", @"\\");
+            OpenFileDialog Open_BallList = new OpenFileDialog();
+            Open_BallList.Filter = "BallList (*.xml)|*.xml";
+            Open_BallList.ShowDialog();
+            textBox_BallList.Text = (Open_BallList.FileName).Replace(@"\", @"\\");
         }
     }
 }
