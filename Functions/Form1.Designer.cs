@@ -148,6 +148,7 @@
             this.button_BallList.TabIndex = 13;
             this.button_BallList.Text = "Carregar";
             this.button_BallList.UseVisualStyleBackColor = true;
+            this.button_BallList.Click += new System.EventHandler(this.button_BallList_Click);
             // 
             // MapServerList
             // 
@@ -178,6 +179,7 @@
             this.button_MapServerList.TabIndex = 16;
             this.button_MapServerList.Text = "Carregar";
             this.button_MapServerList.UseVisualStyleBackColor = true;
+            this.button_MapServerList.Click += new System.EventHandler(this.button_MapServerList_Click);
             // 
             // textBox_LinkResource
             // 

@@ -98,5 +98,21 @@ namespace Functions
 
         RequestDownloader.run(textBox_LinkReq.Text);
         }
+
+        private void button_MapServerList_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog Open_Templatealllist = new OpenFileDialog();
+            Open_Templatealllist.Filter = "MapServerList (*.xml)|*.xml";
+            Open_Templatealllist.ShowDialog();
+            textBox_MapServerList.Text = (Open_Templatealllist.FileName).Replace(@"\", @"\\");
+        }
+
+        private void button_BallList_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog Open_Templatealllist = new OpenFileDialog();
+            Open_Templatealllist.Filter = "BallList (*.xml)|*.xml";
+            Open_Templatealllist.ShowDialog();
+            textBox_BallList.Text = (Open_Templatealllist.FileName).Replace(@"\", @"\\");
+        }
     }
 }
