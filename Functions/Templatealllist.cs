@@ -70,7 +70,7 @@ namespace Functions
                         }
                         catch (Exception ex)
                         {
-                            LoggerFactory.GetLogger().LogError("Erro: " + ex.Message);
+                            LoggerFactory.GetLogger().LogError("Erro: " + ex.Message); //erro
                         }
                     }
                 }
