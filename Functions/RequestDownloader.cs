@@ -26,7 +26,7 @@ namespace Functions
                 Thread.Sleep(1000);
                 webClient.DownloadFile(url + "BallList.xml", "Xml/BallList.xml");
                 Thread.Sleep(1000);
-                webClient.DownloadFile(url + "bombconfig.xml", "Xml/bombconfig.xml");
+                webClient.DownloadFile(url + "MapServerList.xml", "Xml/MapServerList.xml");
                 Thread.Sleep(1000);
 
                 MessageBox.Show("Download das xml's Concluído!",

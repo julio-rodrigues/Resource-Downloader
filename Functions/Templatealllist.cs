@@ -4,6 +4,9 @@ using System.Net;
 using System.IO;
 using System.Windows.Forms;
 
+using Base.Factories;
+
+
 namespace Functions
 {
     public class Templatealllist
@@ -60,15 +63,14 @@ namespace Functions
 
                             WebClient client = new WebClient();
 
-                            //textBox_Load.Text += Environment.NewLine + data[i];
-                            //textBox_Load.SelectionStart = textBox_Load.Text.Length;
-                            //textBox_Load.ScrollToCaret();
-
+                            LoggerFactory.GetLogger().LogSuccess(data[i]); //Arquivos Download
                             client.DownloadFile(data[i], baixar[i]);
+
+                           
                         }
                         catch (Exception ex)
                         {
-                            //textBox_Load.Text += Environment.NewLine + "Erro: " + ex.Message;
+                            LoggerFactory.GetLogger().LogError("Erro: " + ex.Message);
                         }
                     }
                 }

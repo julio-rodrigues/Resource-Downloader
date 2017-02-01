@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B38FBF4-B95B-4749-8B5D-FFDC5FE0F7ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Base</RootNamespace>
+    <AssemblyName>Base</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Interfaces\IStack.cs" />
+    <Compile Include="Factories\StackFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\Interfaces\ISingleton.cs" />
+    <Compile Include="Data\Interfaces\IQueue.cs" />
+    <Compile Include="Data\Interfaces\IComponent.cs" />
+    <Compile Include="Factories\SingletonFactory.cs" />
+    <Compile Include="Factories\QueueFactory.cs" />
+    <Compile Include="Data\Interfaces\IThread.cs" />
+    <Compile Include="Data\Interfaces\IUpdater.cs" />
+    <Compile Include="Factories\ThreadFactory.cs" />
+    <Compile Include="Factories\Tasks\ThreadTask.cs" />
+    <Compile Include="Factories\Tasks\UpdaterTask.cs" />
+    <Compile Include="Factories\UpdaterFactory.cs" />
+    <Compile Include="Data\Interfaces\ILogger.cs" />
+    <Compile Include="Factories\Loggers\EventLogger.cs" />
+    <Compile Include="Data\Enums\LogType.cs" />
+    <Compile Include="Data\Abstracts\ADispatcher.cs" />
+    <Compile Include="Data\Interfaces\IDispatcherBase.cs" />
+    <Compile Include="Data\DispatcherBases\ILoggerDispatcher.cs" />
+    <Compile Include="Factories\LoggerFactory.cs" />
+    <Compile Include="Data\Interfaces\IConfiguration.cs" />
+    <Compile Include="Factories\ConfigurationFactory.cs" />
+    <Compile Include="Data\DispatcherBases\IConfigurationDispatcher.cs" />
+    <Compile Include="Factories\Loggers\ConsoleLogger.cs" />
+    <Compile Include="Data\DispatcherBases\IThreadDispatcher.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
