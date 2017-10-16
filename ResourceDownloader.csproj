@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9897F0CE-14BD-40DE-BA98-36961C6F9085}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ResourceDownloader</RootNamespace>
     <AssemblyName>ResourceDownloader</AssemblyName>
@@ -42,10 +42,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Base, Version=1.0.6240.41119, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Base\bin\Debug\Base.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Windows.Forms" />

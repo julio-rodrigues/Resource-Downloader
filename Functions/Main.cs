@@ -42,14 +42,14 @@ namespace Functions
         private void button1_Click_1(object sender, EventArgs e)
         {
             
-            if((textBox_MapServerList.Text == String.Empty && textBox_LinkResource.Text == String.Empty) || (textBox_BallList.Text == String.Empty && textBox_MapServerList.Text == String.Empty))
-            {
-                MessageBox.Show("String Inválida",
-                "Erro",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error);
-                return;
-            }
+            //if((textBox_MapServerList.Text == String.Empty && textBox_LinkResource.Text == String.Empty) || (textBox_BallList.Text == String.Empty && textBox_MapServerList.Text == String.Empty))
+            //{
+            //    MessageBox.Show("String Inválida",
+            //    "Erro",
+            //    MessageBoxButtons.OK,
+            //    MessageBoxIcon.Error);
+            //    return;
+            //}
 
             #region Desativa botoes
 
