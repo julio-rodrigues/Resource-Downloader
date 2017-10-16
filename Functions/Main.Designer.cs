@@ -173,11 +173,13 @@
             // 
             // textBox_LinkResource
             // 
+            this.textBox_LinkResource.AccessibleName = "";
             this.textBox_LinkResource.BackColor = System.Drawing.Color.White;
             this.textBox_LinkResource.Location = new System.Drawing.Point(12, 234);
             this.textBox_LinkResource.Name = "textBox_LinkResource";
             this.textBox_LinkResource.Size = new System.Drawing.Size(286, 20);
             this.textBox_LinkResource.TabIndex = 17;
+            this.textBox_LinkResource.Text = "http://ddt-a.akamaihd.net/";
             this.textBox_LinkResource.TextChanged += new System.EventHandler(this.textBox_LinkResource_TextChanged);
             // 
             // LinkResource
