@@ -49,7 +49,7 @@
             this.button_BaixarXmls = new System.Windows.Forms.Button();
             this.Open_BallList = new System.Windows.Forms.OpenFileDialog();
             this.Open_MapServerList = new System.Windows.Forms.OpenFileDialog();
-            this.textBox_Load = new System.Windows.Forms.TextBox();
+            textBox_Load = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox_template
@@ -160,6 +160,7 @@
             this.textBox_MapServerList.Name = "textBox_MapServerList";
             this.textBox_MapServerList.Size = new System.Drawing.Size(286, 20);
             this.textBox_MapServerList.TabIndex = 15;
+            this.textBox_MapServerList.TextChanged += new System.EventHandler(this.textBox_MapServerList_TextChanged);
             // 
             // button_MapServerList
             // 
@@ -225,7 +226,8 @@
             this.textBox_LinkReq.Name = "textBox_LinkReq";
             this.textBox_LinkReq.Size = new System.Drawing.Size(286, 20);
             this.textBox_LinkReq.TabIndex = 20;
-            this.textBox_LinkReq.Text = "Exemplo : http://ddtank.com/request/";
+            this.textBox_LinkReq.Text = "http://quest344-ddt.337.com/";
+            this.textBox_LinkReq.TextChanged += new System.EventHandler(this.textBox_LinkReq_TextChanged);
             // 
             // button_BaixarXmls
             // 
@@ -247,15 +249,15 @@
             // 
             // textBox_Load
             // 
-            this.textBox_Load.Location = new System.Drawing.Point(12, 260);
-            this.textBox_Load.MaxLength = 9999999;
-            this.textBox_Load.Multiline = true;
-            this.textBox_Load.Name = "textBox_Load";
-            this.textBox_Load.ReadOnly = true;
-            this.textBox_Load.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox_Load.Size = new System.Drawing.Size(479, 161);
-            this.textBox_Load.TabIndex = 10;
-            this.textBox_Load.TextChanged += new System.EventHandler(this.textBox_Load_TextChanged);
+            textBox_Load.Location = new System.Drawing.Point(12, 260);
+            textBox_Load.MaxLength = 9999999;
+            textBox_Load.Multiline = true;
+            textBox_Load.Name = "textBox_Load";
+            textBox_Load.ReadOnly = true;
+            textBox_Load.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            textBox_Load.Size = new System.Drawing.Size(479, 161);
+            textBox_Load.TabIndex = 10;
+            textBox_Load.TextChanged += new System.EventHandler(textBox_Load_TextChanged);
             // 
             // Principal
             // 
@@ -276,7 +278,7 @@
             this.Controls.Add(this.button_BallList);
             this.Controls.Add(this.textBox_BallList);
             this.Controls.Add(this.BallList);
-            this.Controls.Add(this.textBox_Load);
+            this.Controls.Add(textBox_Load);
             this.Controls.Add(this.progressBar_load);
             this.Controls.Add(this.btn_iniciar);
             this.Controls.Add(this.btn_Template);
@@ -317,7 +319,7 @@
         private System.Windows.Forms.Button button_BaixarXmls;
         private System.Windows.Forms.OpenFileDialog Open_BallList;
         private System.Windows.Forms.OpenFileDialog Open_MapServerList;
-        public System.Windows.Forms.TextBox textBox_Load;
+        public static System.Windows.Forms.TextBox textBox_Load;
     }
 }
 

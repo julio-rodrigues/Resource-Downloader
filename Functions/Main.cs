@@ -10,7 +10,7 @@ namespace Functions
         {
             InitializeComponent();
         }
-        private bool _stoploop;
+        //private bool _stoploop;
         private void Principal_Load(object sender, EventArgs e)
         {
             
@@ -41,7 +41,7 @@ namespace Functions
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
+
             //if((textBox_MapServerList.Text == String.Empty && textBox_LinkResource.Text == String.Empty) || (textBox_BallList.Text == String.Empty && textBox_MapServerList.Text == String.Empty))
             //{
             //    MessageBox.Show("String Inválida",
@@ -59,16 +59,13 @@ namespace Functions
             button_MapServerList.Enabled = false;
 
             #endregion
-            _stoploop = false;
-
-            Templatealllist templatealllist = new Templatealllist();
+            //_stoploop = false;
 
             string loc_Template = textBox_template.Text;
             //Salvar o link da resource
             string reslink = textBox_LinkResource.Text;
 
-            templatealllist.ARM(loc_Template,reslink);
-
+            Templatealllist.ARM(loc_Template, reslink);
         }
         public void textBox_Load_TextChanged(object sender, EventArgs e)
         {
@@ -82,14 +79,14 @@ namespace Functions
 
         private void button_stop_Click(object sender, EventArgs e)
         {
-            _stoploop = true;
+            //_stoploop = true;
         }
 
         private void button_BaixarXmls_Click(object sender, EventArgs e)
         {
-            if(textBox_LinkReq.Text == String.Empty || textBox_LinkReq.Text == @"Exemplo : http://ddtank.com/request/")
+            if(textBox_LinkReq.Text == String.Empty)
             {
-                MessageBox.Show("String Inválida",
+                MessageBox.Show("Por favor preencha o campo",
                 "Erro",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
@@ -113,6 +110,16 @@ namespace Functions
             Open_BallList.Filter = "BallList (*.xml)|*.xml";
             Open_BallList.ShowDialog();
             textBox_BallList.Text = (Open_BallList.FileName).Replace(@"\", @"\\");
+        }
+
+        private void textBox_LinkReq_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_MapServerList_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

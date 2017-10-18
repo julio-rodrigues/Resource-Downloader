@@ -3,16 +3,16 @@ using System.Xml;
 using System.Net;
 using System.IO;
 using System.Windows.Forms;
-
-using Base.Factories;
+using System.Drawing;
 
 
 namespace Functions
 {
     public class Templatealllist
     {
-        public void ARM(string loc_Template, string reslink)
+        public static void ARM(string loc_Template, string reslink)
         {
+            WebClient client = new WebClient();
             XmlDocument xmldocument = new XmlDocument();
             //Carregar xml templatealllist
             xmldocument.Load(loc_Template);
@@ -57,20 +57,27 @@ namespace Functions
                             if (i != 4)
                             {
                                 //Criar a pasta.
-                                if (!Directory.Exists(diretorio[i]))
+                                if (!Directory.Exists(diretorio[i])){
+                                    //Principal.textBox_Load.ForeColor = Color.Red;
+                                    //Principal.textBox_Load.ReadOnly = false;
+                                    Principal.textBox_Load.Text += Environment.NewLine + "Pasta Criada: " + diretorio[i];
+                                    Principal.textBox_Load.SelectionStart = Principal.textBox_Load.Text.Length;
+                                    Principal.textBox_Load.ScrollToCaret();
                                     Directory.CreateDirectory(diretorio[i]);
+                                }
+                                    
                             }
-
-                            WebClient client = new WebClient();
-
-                            LoggerFactory.GetLogger().LogSuccess(data[i]); //Arquivos Download
+                            //Principal.textBox_Load.ForeColor = Color.Green;
+                            //Principal.textBox_Load.ReadOnly = false;
+                            Principal.textBox_Load.Text += Environment.NewLine + data[i];
+                            Principal.textBox_Load.SelectionStart = Principal.textBox_Load.Text.Length;
+                            Principal.textBox_Load.ScrollToCaret();
                             client.DownloadFile(data[i], baixar[i]);
-
                            
                         }
                         catch (Exception ex)
                         {
-                            LoggerFactory.GetLogger().LogError("Erro: " + ex.Message); //erro
+                            Principal.textBox_Load.Text += Environment.NewLine + "Erro: " + ex.Message;
                         }
                     }
                 }
