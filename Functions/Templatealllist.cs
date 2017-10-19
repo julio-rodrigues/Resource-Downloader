@@ -122,6 +122,80 @@ namespace Functions
                         Principal.textBox_Load.Text += Environment.NewLine + "Erro: " + ex.Message;
                     }
                 }
+                else if (selectNode.Attributes["CategoryID"].Value == "12")
+                {
+
+                    string baixar2;
+                    string diretorio2;
+                    baixar2 = "image/task/" + selectNode.Attributes["Pic"].Value + "/icon.png";
+                    diretorio2 = "image/task/" + selectNode.Attributes["Pic"].Value;
+
+                    string uri = reslink + diretorio2;
+
+                    string data2;
+
+                    data2 = uri + "/icon.png";
+
+                    try
+                    {
+                        if (!Directory.Exists(diretorio2))
+                        {
+                            Principal.textBox_Load.SelectionStart = Principal.textBox_Load.Text.Length;
+                            Principal.textBox_Load.ScrollToCaret();
+                            //Principal.textBox_Load.ForeColor = Color.Red;
+                            //Principal.textBox_Load.ReadOnly = false;
+                            Principal.textBox_Load.Text += Environment.NewLine + "Pasta Criada: " + diretorio2;
+                            Directory.CreateDirectory(diretorio2);
+                        }
+
+                        Principal.textBox_Load.Text += Environment.NewLine + data2;
+                        Principal.textBox_Load.SelectionStart = Principal.textBox_Load.Text.Length;
+                        Principal.textBox_Load.ScrollToCaret();
+                        client.DownloadFile(data2, baixar2);
+                    }
+                    catch (Exception ex)
+                    {
+                        //erro
+                        Principal.textBox_Load.Text += Environment.NewLine + "Erro: " + ex.Message;
+                    }
+                }
+                else if (selectNode.Attributes["CategoryID"].Value == "16")
+                {
+
+                    string baixar2;
+                    string diretorio2;
+                    baixar2 = "image/specialprop/chatBall/" + selectNode.Attributes["Pic"].Value + "/icon.png";
+                    diretorio2 = "image/specialprop/chatBall/" + selectNode.Attributes["Pic"].Value;
+
+                    string uri = reslink + diretorio2;
+
+                    string data2;
+
+                    data2 = uri + "/icon.png";
+
+                    try
+                    {
+                        if (!Directory.Exists(diretorio2))
+                        {
+                            Principal.textBox_Load.SelectionStart = Principal.textBox_Load.Text.Length;
+                            Principal.textBox_Load.ScrollToCaret();
+                            //Principal.textBox_Load.ForeColor = Color.Red;
+                            //Principal.textBox_Load.ReadOnly = false;
+                            Principal.textBox_Load.Text += Environment.NewLine + "Pasta Criada: " + diretorio2;
+                            Directory.CreateDirectory(diretorio2);
+                        }
+
+                        Principal.textBox_Load.Text += Environment.NewLine + data2;
+                        Principal.textBox_Load.SelectionStart = Principal.textBox_Load.Text.Length;
+                        Principal.textBox_Load.ScrollToCaret();
+                        client.DownloadFile(data2, baixar2);
+                    }
+                    catch (Exception ex)
+                    {
+                        //erro
+                        Principal.textBox_Load.Text += Environment.NewLine + "Erro: " + ex.Message;
+                    }
+                }
             }
         }
     }
