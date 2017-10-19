@@ -118,6 +118,7 @@ namespace Functions
                         Principal.textBox_Load.ScrollToCaret();
                         client.DownloadFile(data2, baixar2);
                     } catch(Exception ex) {
+                        //erro
                         Principal.textBox_Load.Text += Environment.NewLine + "Erro: " + ex.Message;
                     }
                 }
