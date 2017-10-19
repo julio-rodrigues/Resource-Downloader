@@ -129,6 +129,7 @@
             this.textBox_BallList.Name = "textBox_BallList";
             this.textBox_BallList.Size = new System.Drawing.Size(286, 20);
             this.textBox_BallList.TabIndex = 12;
+            this.textBox_BallList.TextChanged += new System.EventHandler(this.textBox_BallList_TextChanged);
             // 
             // button_BallList
             // 
@@ -257,7 +258,7 @@
             textBox_Load.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             textBox_Load.Size = new System.Drawing.Size(479, 161);
             textBox_Load.TabIndex = 10;
-            textBox_Load.TextChanged += new System.EventHandler(textBox_Load_TextChanged);
+            textBox_Load.TextChanged += new System.EventHandler(this.textBox_Load_TextChanged);
             // 
             // Principal
             // 

@@ -65,7 +65,7 @@ namespace Functions
             //Salvar o link da resource
             string reslink = textBox_LinkResource.Text;
 
-            Templatealllist.ARM(loc_Template, reslink);
+            Templatealllist.image(loc_Template, reslink);
         }
         public void textBox_Load_TextChanged(object sender, EventArgs e)
         {
@@ -118,6 +118,11 @@ namespace Functions
         }
 
         private void textBox_MapServerList_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_BallList_TextChanged(object sender, EventArgs e)
         {
 
         }
